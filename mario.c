@@ -12,18 +12,19 @@ int main(void)
         printf("Please give a hieght for the staircase: \n");
         height = GetInt();
     }
-    while(height > 23 || height < 0)
+    while(height > 23 || height < 0);
     {
-        for(i = 0; i < height; i++)
+        for(int i = 0; i < height; i++)
         {
-            for(j = 1; j < (height - i); j++)
+            for(int j = 1; j < (height - i); j++)
             {
                 printf(" ");
             }
-            for(k = 0; k < (i + 2); k++)
+            for(int k = 0; k < (i + 2); k++)
             {
-                printf(
+                printf("#");
             }
+            printf("\n");
         }
     }
 }
