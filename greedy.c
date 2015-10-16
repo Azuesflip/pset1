@@ -10,6 +10,7 @@ int main(void)
     
      do
      {
+        // Gets the input from the user and checks to make sure it is a proper input.
         printf("please enter the amount of money: \n");
         money = GetFloat();
         if(money <= 0)
@@ -18,8 +19,10 @@ int main(void)
      }
      while(money <= 0);
      {
+        // Rounds the input up into an int to make it easier to work with and to avoid errors.
         moneyChanger = (int)round(money*100);
         
+        // Loops till the amount of money is zero to see how many coins are needed.
         while(moneyChanger > 0)
         {
             if(moneyChanger >= 25)
@@ -43,7 +46,11 @@ int main(void)
                 counter++;
             }
         }
+        
+        // Prints out the answer to the question at hand.
         printf("%d\n", counter);
+        
+        return 0;
      }
      
 }
